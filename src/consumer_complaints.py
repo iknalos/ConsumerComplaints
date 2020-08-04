@@ -64,7 +64,8 @@ for keys in Output:
     
     final=(value[4:len(value)],int(value[0:4]),Output[keys],i,round(Percent))
     final_list.append(final)
-    
-    with open(output_filename, mode='a') as report_file:
+final_list.sort()
+with open(output_filename, mode='a') as report_file:
+    for row in final_list:
         report_writer = csv.writer(report_file, delimiter=',')
         report_writer.writerow(final)
