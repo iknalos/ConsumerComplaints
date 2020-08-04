@@ -1,7 +1,7 @@
 import csv
 listy=[]
 listz=[]
-with open('complaint.csv', newline='') as f:
+with open('complaints.csv', newline='') as f:
     reader = csv.reader(f)
     for row in reader:
         row[0]=row[0].split('-')[0]
