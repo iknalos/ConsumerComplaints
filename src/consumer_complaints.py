@@ -66,5 +66,5 @@ for keys in Output:
     final_list.append(final)
     
     with open(output_filename, mode='a') as report_file:
-        report_writer = csv.writer(employee_file, delimiter=',')
+        report_writer = csv.writer(report_file, delimiter=',')
         report_writer.writerow(final)
