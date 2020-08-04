@@ -1,7 +1,14 @@
 import csv
+import sys
+import os
+input_filename, output_filename = sys.argv[1:]
+
+# Creating an error file to log the details of the errors
+error_file = open(os.path.dirname(sys.argv[2])+'/error_logfile.txt', 'a')
+
 listy=[]
 listz=[]
-with open('complaints.csv', newline='') as f:
+with open(input_filename, newline='') as f:
     reader = csv.reader(f)
     for row in reader:
         row[0]=row[0].split('-')[0]
@@ -58,6 +65,6 @@ for keys in Output:
     final=(value[4:len(value)],int(value[0:4]),Output[keys],i,round(Percent))
     final_list.append(final)
     
-    with open('report.csv', mode='a') as report_file:
+    with open(output_filename, mode='a') as report_file:
         report_writer = csv.writer(employee_file, delimiter=',')
         report_writer.writerow(final)
