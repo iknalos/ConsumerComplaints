@@ -68,4 +68,4 @@ final_list.sort()
 with open(output_filename, mode='a') as report_file:
     for row in final_list:
         report_writer = csv.writer(report_file, delimiter=',')
-        report_writer.writerow(final)
+        report_writer.writerow(row)
