@@ -2,8 +2,9 @@
 
 This GitHub repository contains my solution to the coding challenge for Insight Fellowship Program
 
-Here i am using the same input csv file to generate and result.csv file
+Here i am using the same input csv file to generate and store output in result.csv file
 
+This is the output we get when we run for input as in insight_testsuite/tests/test_1
 "credit reporting, credit repair services, or other personal consumer reports",2019,3,2,67 "credit reporting, credit repair services, or other personal consumer reports",2020,1,1,100 debt collection,2019,1,1,100
 
 In Short we are generating the output:
